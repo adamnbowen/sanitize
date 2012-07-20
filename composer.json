@@ -1,0 +1,13 @@
+{
+    "name": "adamnbowen/sanitize",
+    "description": "Sanitizes arbitrary objects and arrays.",
+    "authors": [
+        {
+            "name": "Adam Bowen",
+            "email": "adamnbowen@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
