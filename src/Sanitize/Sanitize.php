@@ -43,7 +43,7 @@ class Sanitize
    * @param mixed $input 
    * @return mixed Either a simple cleaned string or a cleaned array.
    */
-  private function _sanitize($input)
+  private static function _sanitize($input)
   {
     $input = self::_fixIncompleteObject($input);
 
@@ -66,7 +66,7 @@ class Sanitize
    * @param object $object The "broken" object
    * @return object The "fixed" object
    */
-  private function _fixIncompleteObject($input)
+  private static function _fixIncompleteObject($input)
   {
     if (!is_object($input) && gettype($input) == 'object') {
       return unserialize(serialize($input));
