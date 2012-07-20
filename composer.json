@@ -2,12 +2,14 @@
     "name": "adamnbowen/sanitize",
     "description": "Sanitizes arbitrary objects and arrays.",
     "keywords": ["sanitize", "filter"],
+    "homepage": "https://github.com/adamnbowen/sanitize",
     "type": "library",
     "license": "dbad",
     "authors": [
         {
             "name": "Adam Bowen",
-            "email": "adamnbowen@gmail.com"
+            "email": "adamnbowen@gmail.com",
+            "homepage": "http://adamnbowen.com/"
         },
         {
             "name": "Russell Stringer",
