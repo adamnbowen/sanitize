@@ -1,13 +1,23 @@
 {
     "name": "adamnbowen/sanitize",
     "description": "Sanitizes arbitrary objects and arrays.",
+    "keywords": ["sanitize", "filter"],
+    "type": "library",
+    "license": "dbad",
     "authors": [
         {
             "name": "Adam Bowen",
             "email": "adamnbowen@gmail.com"
+        },
+        {
+            "name": "Russell Stringer",
+            "email": "r.stringer@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {"Sanitize": "src/"}
+    },
     "require": {
-
+        "php": ">=5.3.0"
     }
 }
