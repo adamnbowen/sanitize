@@ -10,7 +10,7 @@
 
 namespace Sanitize;
 
-use Sanitize/Filtered;
+use Sanitize\Filtered;
 
 class Sanitize
 {
