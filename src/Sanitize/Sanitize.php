@@ -38,7 +38,8 @@ class Sanitize
    *
    * Sends all inputs to _fixIncompleteObject() to ensure there are no broken
    * objects, then if $input is an object or an array, it cleans $input
-   * recursively.  If $input is a string, it is simply cleaned and returned.
+   * recursively.  If $input is a boolean, it is simply returned.  If $input is
+   * a string, it is simply cleaned and returned.
    * 
    * @param mixed $input 
    * @return mixed Either a simple cleaned string or a cleaned array.
@@ -53,6 +54,9 @@ class Sanitize
         $output[$key] = self::_sanitize($value);
       }
       return $output;
+    }
+    if (is_bool($input)) {
+        return $input;
     }
     return stripslashes(htmlentities(strip_tags(trim($input))));
   }
