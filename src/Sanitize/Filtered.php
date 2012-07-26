@@ -2,7 +2,7 @@
 /**
  * Filtered provides magic methods to get/set arbitrary data in an object.
  * Returns a null value for any access to a key that doesn't exist.
- * 
+ *
  * @author Russell Stringer <r.stringer@gmail.com>
  * @author Adam Bowen <adamnbowen@gmail.com>
  * @license http://dbad-license.org/license DBAD license
@@ -15,7 +15,7 @@ class Filtered
 
   /**
    * _filtered the object accessed via __get() and __set()
-   * 
+   *
    * @var array
    */
   private $_filtered = array();
@@ -24,8 +24,8 @@ class Filtered
    * __get If a nonexistent property of a Filtered object is called, this
    * function checks to see if the property corresponds to a key of
    * $this->_filtered, and returns that, otherwise it returns null.
-   * 
-   * @param mixed $key 
+   *
+   * @param mixed $key
    * @return void
    */
   public function __get($key)

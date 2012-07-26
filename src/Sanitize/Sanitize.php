@@ -2,7 +2,7 @@
 /**
  * Sanitize A class for sanitizing arrays and objects, with the additional
  * feature of returning null for nonexistent properties.
- * 
+ *
  * @author Adam Bowen <adamnbowen@gmail.com>
  * @author Russell Stringer <r.stringer@gmail.com>
  * @license http://dbad-license.org/license DBAD license
@@ -17,7 +17,7 @@ class Sanitize
 
   /**
    * Clean Sanitize the keys and values of the $unclean object/array
-   * 
+   *
    * @param mixed $unclean
    * @return Filtered object containing the sanitized values
    */
@@ -40,8 +40,8 @@ class Sanitize
    * objects, then if $input is an object or an array, it cleans $input
    * recursively.  If $input is a boolean, it is simply returned.  If $input is
    * a string, it is simply cleaned and returned.
-   * 
-   * @param mixed $input 
+   *
+   * @param mixed $input
    * @return mixed Either a simple cleaned string or a cleaned array.
    */
   private static function _sanitize($input)
@@ -50,14 +50,16 @@ class Sanitize
 
     if (is_array($input) || is_object($input)) {
       $output = array();
-      foreach ($input as $key => $value){
+      foreach ($input as $key => $value) {
         $output[$key] = self::_sanitize($value);
       }
+
       return $output;
     }
     if (is_bool($input)) {
         return $input;
     }
+
     return stripslashes(htmlentities(strip_tags(trim($input))));
   }
 
@@ -75,6 +77,7 @@ class Sanitize
     if (!is_object($input) && gettype($input) == 'object') {
       return unserialize(serialize($input));
     }
+
     return $input;
   }
 
