@@ -1,7 +1,7 @@
 Sanitize
 ========
 
-Sanitizes arbitrary objects and arrays
+Sanitizes arbitrary objects and arrays, and provides an object interface for accessing the sanitized objects and arrays.
 
 Usage
 -----
