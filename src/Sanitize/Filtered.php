@@ -10,7 +10,9 @@
 
 namespace Sanitize;
 
-class Filtered
+use Iterator;
+
+class Filtered implements Iterator
 {
     /**
      * filtered the object accessed via __get() and __set()
@@ -18,6 +20,50 @@ class Filtered
      * @var array
      */
     private $filtered = array();
+
+    /**
+     * rewind rewind the Iterator to the first element. Necessary for 
+     * implementing Iterator.
+     */
+    public function rewind()
+    {
+        reset($this->filtered);
+    }
+
+    /**
+     * current return the current element. Necessary for implementing Iterator.
+     */
+    public function current()
+    {
+        return current($this->filtered);
+    }
+
+    /**
+     * key return the key of the current element. Necessary for implementing
+     * Iterator.
+     */
+    public function key()
+    {
+        return key($this->filtered);
+    }
+
+    /**
+     * next move forward to next element. Necessary for implementing Iterator.
+     */
+    public function next()
+    {
+        return next($this->filtered);
+    }
+
+    /**
+     * valid checks if the current position is valid. Necessary for implementing
+     * Iterator.
+     */
+    public function valid()
+    {
+        $key = key($this->filtered);
+        return ($key !== null && $key !== false);
+    }
 
     /**
      * __get If a nonexistent property of a Filtered object is called, this
