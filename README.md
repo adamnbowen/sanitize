@@ -8,7 +8,7 @@ Sanitizes arbitrary objects and arrays
 use Sanitize\Sanitize;
 
 $sanitized = Sanitize::Clean($_POST);
-$sanitized->foo; // == $_POST['foo'] OR null
+$sanitized->foo; // == a sanitized $_POST['foo'] OR null
 ```
 
 Coding Standards
