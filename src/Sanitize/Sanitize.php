@@ -19,11 +19,11 @@ class Sanitize
     /**
      * Clean Sanitize the keys and values of the $unclean object/array
      *
-     * @param mixed $unclean
+     * @param mixed $unclean an array or object to clean
      *
      * @return Filtered object containing the sanitized values
      */
-    public static function Clean($unclean)
+    public static function clean($unclean)
     {
         $filtered = new Filtered();
         foreach ($unclean as $key => $value) {
