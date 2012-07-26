@@ -20,7 +20,7 @@ Install via [Composer](http://getcomposer.org/), by first adding the following i
 ```json
 {
     "require": {
-        "adamnbowen/sanitize": "0.1.*"
+        "adamnbowen/sanitize": "0.2.*"
     }
 }
 ```
