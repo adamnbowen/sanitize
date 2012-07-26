@@ -5,6 +5,8 @@ Sanitizes arbitrary objects and arrays
 
 ```php
 <?php
+use Sanitize\Sanitize;
+
 $sanitized = Sanitize::Clean($_POST);
 $sanitized->foo; // == $_POST['foo'] OR null
 ```
