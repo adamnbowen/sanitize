@@ -22,7 +22,7 @@ class Filtered implements Iterator
     private $filtered = array();
 
     /**
-     * rewind rewind the Iterator to the first element. Necessary for 
+     * rewind rewind the Iterator to the first element. Necessary for
      * implementing Iterator.
      */
     public function rewind()
@@ -62,6 +62,7 @@ class Filtered implements Iterator
     public function valid()
     {
         $key = key($this->filtered);
+
         return ($key !== null && $key !== false);
     }
 
