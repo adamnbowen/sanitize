@@ -1,4 +1,4 @@
-sanitize
+Sanitize
 ========
 
 Sanitizes arbitrary objects and arrays
