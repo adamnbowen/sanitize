@@ -40,3 +40,5 @@ Use the following coding standards in order:
 Changelog
 ---------
 * Sanitize::Clean() is now Sanitize::clean()
+* Filtered has been renamed to Proxy()
+* Proxy is now iterable, so you can foreach over sanitized objects/arrays
