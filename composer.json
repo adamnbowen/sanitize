@@ -1,7 +1,7 @@
 {
     "name": "adamnbowen/sanitize",
     "description": "Sanitizes arbitrary objects and arrays.",
-    "keywords": ["sanitize", "filter"],
+    "keywords": ["sanitize", "proxy"],
     "homepage": "https://github.com/adamnbowen/sanitize",
     "type": "library",
     "license": "dbad",

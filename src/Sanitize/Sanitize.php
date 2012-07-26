@@ -10,26 +10,26 @@
 
 namespace Sanitize;
 
-use Sanitize\Filtered;
+use Sanitize\Proxy;
 
 class Sanitize
 {
     /**
      * Clean Sanitize the keys and values of the $unclean object/array
      *
-     * @param  mixed    $unclean an array or object to clean
-     * @return Filtered object containing the sanitized values
+     * @param  mixed $unclean an array or object to clean
+     * @return Proxy object containing the sanitized values
      */
     public static function clean($unclean)
     {
-        $filtered = new Filtered();
+        $proxy = new Proxy();
         foreach ($unclean as $key => $value) {
             $sanitizedKey = self::sanitize($key);
             $sanitizedValue = self::sanitize($value);
-            $filtered->$sanitizedKey = $sanitizedValue;
+            $proxy->$sanitizedKey = $sanitizedValue;
         }
 
-        return $filtered;
+        return $proxy;
     }
 
     /**
