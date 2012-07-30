@@ -22,11 +22,4 @@ class SanitizeTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals($a, $b);
     }
-
-    public function testSanitizedTrimsWhitespace()
-    {
-        $s = Sanitize::clean(array('bar' => '    testing       '));
-
-        $this->assertEquals('testing', $s->bar);
-    }
 }
