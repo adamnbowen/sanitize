@@ -42,3 +42,4 @@ Changelog
 * Sanitize::Clean() is now Sanitize::clean()
 * Filtered has been renamed to Proxy()
 * Proxy is now iterable, so you can foreach over sanitized objects/arrays
+* !empty() is no longer called on values—Sanitized objects will retain values of `false`, `0`, etc.
