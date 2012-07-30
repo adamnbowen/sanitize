@@ -1,5 +1,6 @@
 Sanitize
 ========
+[![Build Status](https://secure.travis-ci.org/adamnbowen/sanitize.png)](http://travis-ci.org/adamnbowen/sanitize)
 
 Sanitizes arbitrary objects and arrays, and provides an object interface for accessing the sanitized objects and arrays.
 
