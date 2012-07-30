@@ -15,7 +15,7 @@ use Sanitize\Proxy;
 class Sanitize
 {
     /**
-     * Clean Sanitize the keys and values of the $unclean object/array
+     * clean Sanitize the keys and values of the $unclean object/array
      *
      * @param  mixed $unclean an array or object to clean
      * @return Proxy object containing the sanitized values
