@@ -41,9 +41,7 @@ class Proxy implements IteratorAggregate
      */
     public function __get($key)
     {
-        if (array_key_exists($key, $this->proxy)
-            && !empty($this->proxy[$key])
-        ) {
+        if (array_key_exists($key, $this->proxy)) {
             return $this->proxy[$key];
         } else {
             return null;
