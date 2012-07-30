@@ -22,4 +22,13 @@ class SanitizeTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals($a, $b);
     }
+
+    public function testBoolValuesUnsanitized()
+    {
+        $s = Sanitize::clean(array('foo' => true, 'bar' => false));
+
+        $this->assertTrue($s->foo);
+
+        $this->assertFalse($s->bar);
+    }
 }
