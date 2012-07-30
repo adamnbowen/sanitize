@@ -9,4 +9,24 @@ class SanitizeTest extends PHPUnit_Framework_TestCase
 
         $this->assertNull($s->foo);
     }
+
+    public function testSanitizedObjectIsIterable()
+    {
+        $a = array('foo' => 'bar', 'bar' => 'baz');
+
+        $s = Sanitize::clean($a);
+
+        foreach ($s as $key => $value) {
+            $b[$key] = $value;
+        }
+
+        $this->assertEquals($a, $b);
+    }
+
+    public function testSanitizedTrimsWhitespace()
+    {
+        $s = Sanitize::clean(array('bar' => '    testing       '));
+
+        $this->assertEquals('testing', $s->bar);
+    }
 }
