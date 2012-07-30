@@ -37,6 +37,11 @@ Use the following coding standards in order:
 1. [Zend Framework Coding Standard for PHP](http://framework.zend.com/manual/en/coding-standard.html)
 1. [PEAR Coding Standards](http://pear.php.net/manual/en/standards.php)
 
+TODO
+----
+* Test injection of objects into Sanitize
+* Test __PHP_Incomplete_Class fix
+
 Changelog
 ---------
 * Sanitize::Clean() is now Sanitize::clean()
